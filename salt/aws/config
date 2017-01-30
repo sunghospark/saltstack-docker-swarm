@@ -1,0 +1,7 @@
+[default]
+region = us-west-2
+{% for aws_profile in pillar['aws_profiles'] %}
+[profile {{ aws_profile }}]
+output = json
+region = us-west-2
+{% endfor %}
